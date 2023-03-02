@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldprefix="Joomla\Plugin\RadicalMartFields\Cascade\Field">
+    <fieldset name="content">
+        <fields name="params">
+            <field name="names"
+                   type="textarea"
+                   rows="5"
+                   label="PLG_RADICALMART_FIELDS_CASCADE_PARAMS_NAMES"
+                   description="PLG_RADICALMART_FIELDS_CASCADE_PARAMS_NAMES_DESC"/>
+            <field name="items"
+                   type="textarea"
+                   rows="10"
+                   label="PLG_RADICALMART_FIELDS_CASCADE_PARAMS_ITEMS"
+                   description="PLG_RADICALMART_FIELDS_CASCADE_PARAMS_ITEMS_DESC"/>
+        </fields>
+    </fieldset>
+    <fieldset name="display_products" label="COM_RADICALMART_PARAMS_FIELD_DISPLAY_PRODUCTS">
+        <fields name="params">
+            <field name="display_products" type="radio"
+                   label="COM_RADICALMART_PARAMS_FIELD_DISPLAY_SELECT"
+                   class="btn-group btn-group-yesno"
+                   default="1">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="display_products_as" type="list"
+                   label="PLG_RADICALMART_FIELDS_CASCADE_DISPLAY_PRODUCT_AS"
+                   default="string"
+                   showon="display_products:1">
+                <option value="string">PLG_RADICALMART_FIELDS_CASCADE_DISPLAY_PRODUCT_AS_STRING</option>
+                <option value="list">PLG_RADICALMART_FIELDS_CASCADE_DISPLAY_PRODUCT_AS_LIST</option>
+            </field>
+            <field name="display_products_display" type="list"
+                   default="all"
+                   label="PLG_RADICALMART_FIELDS_CASCADE_PARAMS_DISPLAY"
+                   description="PLG_RADICALMART_FIELDS_CASCADE_PARAMS_DISPLAY_DESC"
+                   showon="display_products:1">
+                <option value="all">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_DISPLAY_ALL</option>
+                <option value="first">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_DISPLAY_FIRST</option>
+                <option value="all_without_first">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_DISPLAY_ALL_WITHOUT_FIRST</option>
+            </field>
+            <field name="display_products_separated_values" type="list"
+                   default=" "
+                   label="PLG_RADICALMART_FIELDS_CASCADE_PARAMS_SEPARATED_BY"
+                   description="PLG_RADICALMART_FIELDS_CASCADE_PARAMS_SEPARATED_BY_DESC"
+                   showon="display_products:1">
+                <option value=" ">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_SEPARATED_BY_SPACE</option>
+                <option value=", ">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_SEPARATED_BY_COMMA</option>
+                <option value=" - ">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_SEPARATED_BY_DACH</option>
+                <option value=" | ">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_SEPARATED_BY_BAR</option>
+            </field>
+            <field name="display_products_template" type="list"
+                   default="default"
+                   label="PLG_RADICALMART_FIELDS_CASCADE_PARAMS_TEMPLATE"
+                   description="PLG_RADICALMART_FIELDS_CASCADE_PARAMS_TEMPLATE_DESC"
+                   showon="display_products:1">
+                <option value="default">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_TEMPLATE_DEFAULT</option>
+                <option value="last">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_TEMPLATE_LAST</option>
+                <option value="label">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_TEMPLATE_LABEL</option>
+            </field>
+        </fields>
+    </fieldset>
+    <fieldset name="display_product" label="COM_RADICALMART_PARAMS_FIELD_DISPLAY_PRODUCT">
+        <fields name="params">
+            <field name="display_product" type="radio"
+                   label="COM_RADICALMART_PARAMS_FIELD_DISPLAY_SELECT"
+                   class="btn-group btn-group-yesno"
+                   default="1">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="display_product_as" type="list"
+                   label="PLG_RADICALMART_FIELDS_CASCADE_DISPLAY_PRODUCT_AS"
+                   default="string"
+                   showon="display_product:1">
+                <option value="string">PLG_RADICALMART_FIELDS_CASCADE_DISPLAY_PRODUCT_AS_STRING</option>
+                <option value="list">PLG_RADICALMART_FIELDS_CASCADE_DISPLAY_PRODUCT_AS_LIST</option>
+            </field>
+            <field name="display_product_display" type="list"
+                   default="all"
+                   label="PLG_RADICALMART_FIELDS_CASCADE_PARAMS_DISPLAY"
+                   description="PLG_RADICALMART_FIELDS_CASCADE_PARAMS_DISPLAY_DESC"
+                   showon="display_product:1">
+                <option value="all">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_DISPLAY_ALL</option>
+                <option value="first">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_DISPLAY_FIRST</option>
+                <option value="all_without_first">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_DISPLAY_ALL_WITHOUT_FIRST</option>
+            </field>
+            <field name="display_product_separated_values" type="list"
+                   default=" "
+                   label="PLG_RADICALMART_FIELDS_CASCADE_PARAMS_SEPARATED_BY"
+                   description="PLG_RADICALMART_FIELDS_CASCADE_PARAMS_SEPARATED_BY_DESC"
+                   showon="display_product:1">
+                <option value=" ">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_SEPARATED_BY_SPACE</option>
+                <option value=", ">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_SEPARATED_BY_COMMA</option>
+                <option value=" - ">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_SEPARATED_BY_DACH</option>
+                <option value=" | ">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_SEPARATED_BY_BAR</option>
+            </field>
+            <field name="display_product_template" type="list"
+                   default="default"
+                   label="PLG_RADICALMART_FIELDS_CASCADE_PARAMS_TEMPLATE"
+                   description="PLG_RADICALMART_FIELDS_CASCADE_PARAMS_TEMPLATE_DESC"
+                   showon="display_product:1">
+                <option value="default">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_TEMPLATE_DEFAULT</option>
+                <option value="last">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_TEMPLATE_LAST</option>
+                <option value="label">PLG_RADICALMART_FIELDS_CASCADE_PARAMS_TEMPLATE_LABEL</option>
+            </field>
+        </fields>
+    </fieldset>
+    <fieldset name="display_filter" label="COM_RADICALMART_PARAMS_FIELD_DISPLAY_FILTER">
+        <fields name="params">
+            <field name="display_filter" type="radio"
+                   label="COM_RADICALMART_PARAMS_FIELD_DISPLAY_SELECT"
+                   class="btn-group btn-group-yesno"
+                   default="1">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+        </fields>
+    </fieldset>
+    <fieldset name="display_variability" label="COM_RADICALMART_PARAMS_FIELD_DISPLAY_VARIABILITY">
+        <fields name="params">
+            <field name="display_variability" type="radio"
+                   label="COM_RADICALMART_PARAMS_FIELD_DISPLAY_SELECT"
+                   class="btn-group btn-group-yesno"
+                   default="0">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+        </fields>
+    </fieldset>
+</form>
