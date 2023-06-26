@@ -47,6 +47,11 @@ for ($i = 0; $i <= $maxLevel; $i++)
 	$listAttrs = 'data-index="' . $i . '" class="form-select" data-name="' . $listLabel . '"';
 	$options   = [];
 
+    if ($onchange)
+    {
+        $listAttrs .= ' onchange="' . $onchange . '"';
+    }
+
 	$tmp        = new \stdClass();
 	$tmp->value = '';
 	$tmp->text  = '- ' . $listLabel . ' -';
@@ -74,7 +79,7 @@ for ($i = 0; $i <= $maxLevel; $i++)
 		}
 	}
 
-	$html[] = '<div class="mb-2">';
+	$html[] = '<div class="mb-2" data-cascade="parent">';
 	$html[] = HTMLHelper::_(
 		'select.genericList',
 		$options,

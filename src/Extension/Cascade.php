@@ -73,8 +73,6 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	public function __construct(&$subject, $config = array())
 	{
 		parent::__construct($subject, $config);
-
-
 	}
 
 	/**
@@ -127,10 +125,8 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	{
 		if ($context === 'com_radicalmart.fields')
 		{
-			$db    = $this->db;
-			$value = array_filter($value);
-			$value = '"' . implode('","', $value) . '"';
-			$query->where('p.fields LIKE ' . $db->quote('%' . $value . '%'));
+			$db = $this->db;
+			$query->where('JSON_VALUE(f.params, ' . $db->quote('$."type"') . ') = ' . $db->quote($search));
 		}
 	}
 
@@ -255,6 +251,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 		$fieldNode->addAttribute('layout', 'joomla.form.field.subform.repeatable');
 		$fieldNode->addAttribute('addfieldprefix', 'Joomla\Plugin\RadicalMartFields\Cascade\Field');
 		$fieldNode->addAttribute('parentclass', 'stack');
+		$fieldNode->addAttribute('min', '1');
 
 		// Build the form source
 		$fieldsXml = new SimpleXMLElement('<form/>');
@@ -328,8 +325,6 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 		$value = array_filter($value);
 		$value = '"' . implode('","', $value) . '"';
 		$query->where('p.fields LIKE ' . $db->quote('%' . $value . '%'));
-
-		// WHERE (JSON_SEARCH(p.fields, 'one', 'Australia', NULL, '$.\"kaskad\".*.\"kaskad\"') IS NOT NULL)
 	}
 
 	/**

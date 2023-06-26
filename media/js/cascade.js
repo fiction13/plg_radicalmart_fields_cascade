@@ -150,7 +150,7 @@ class RadicalMartFieldsCascade {
         if (firstOption) {
             result = {'': Object.keys(items).length ? firstOption : this.not_use};
         }
-console.info();
+
         for (const [key, value] of Object.entries(items)) {
             result[key] = key;
         }
@@ -179,8 +179,10 @@ class RadicalMartFieldSelect {
     toggle(isEnabled) {
         if (isEnabled) {
             this.select.removeAttribute('disabled');
+            this.select.closest('[data-cascade="parent"]').style.display = '';
         } else {
             this.select.setAttribute('disabled', 'disabled');
+            this.select.closest('[data-cascade="parent"]').style.display = 'none';
         }
 
         // this.update();

@@ -2,12 +2,12 @@
 <extension version="3.9" type="plugin" group="radicalmart_fields" method="upgrade">
 	<name>PLG_RADICALMART_FIELDS_CASCADE</name>
     <author>Dmitriy Vasyukov</author>
-    <creationDate>January 2023</creationDate>
+    <creationDate>June 2023</creationDate>
     <authorEmail>info@fictionlabs.ru</authorEmail>
     <authorUrl>https://fictionlabs.ru</authorUrl>
     <copyright>A copyright</copyright>
     <license>GNU General Public License version 2 or later;</license>
-    <version>0.0.1-dev</version>
+    <version>1.0.1-dev</version>
     <description>PLG_RADICALMART_FIELDS_CASCADE_DESCRIPTION</description>
 	<namespace path="src">Joomla\Plugin\RadicalMartFields\Cascade</namespace>
 	<scriptfile>script.php</scriptfile>

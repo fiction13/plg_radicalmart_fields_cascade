@@ -74,7 +74,7 @@ for ($i = 0; $i <= $maxLevel; $i++)
 		}
 	}
 
-	$html[] = '<div class="mb-2">';
+	$html[] = '<div class="mb-2" data-cascade="parent">';
 	$html[] = HTMLHelper::_(
 		'select.genericList',
 		$options,

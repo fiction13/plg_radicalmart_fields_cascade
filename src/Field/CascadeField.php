@@ -39,6 +39,16 @@ class CascadeField extends TextField
 	protected $type = 'cascade';
 
 	/**
+	 * The Cascade helper.
+	 *
+	 * @var  CascadeHelper
+	 *
+	 * @since  __DEPLOY_VERSION__
+	 */
+	protected $helper = null;
+
+
+	/**
 	 * Name of the layout being used to render the field.
 	 *
 	 * @var    string
@@ -58,7 +68,7 @@ class CascadeField extends TextField
 	 *
 	 * @return  boolean  True on success.
 	 *
-	 * @since   1.7.0
+	 * @since   __DEPLOY_VERSION__
 	 */
 	public function setup(\SimpleXMLElement $element, $value, $group = null)
 	{
@@ -85,7 +95,7 @@ class CascadeField extends TextField
 	 *
 	 * @return  array
 	 *
-	 * @since 3.5
+	 * @since __DEPLOY_VERSION__
 	 */
 	protected function getLayoutData(): array
 	{
