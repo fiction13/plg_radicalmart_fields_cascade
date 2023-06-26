@@ -2,7 +2,7 @@
 /*
  * @package     RadicalMart Fields Standard Plugin
  * @subpackage  plg_radicalmart_fields_standard
- * @version     __DEPLOY_VERSION__
+ * @version     1.0.0
  * @author      Delo Design - delo-design.ru
  * @copyright   Copyright (c) 2022 Delo Design. All rights reserved.
  * @license     GNU/GPL license: https://www.gnu.org/copyleft/gpl.html
@@ -30,7 +30,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 *
 	 * @var    bool
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	protected $autoloadLanguage = true;
 
@@ -39,7 +39,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 *
 	 * @var  \Joomla\CMS\Application\CMSApplication
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	protected $app = null;
 
@@ -48,7 +48,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 *
 	 * @var  \Joomla\Database\DatabaseDriver
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	protected $db = null;
 
@@ -56,7 +56,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 * The cascadehelper
 	 *
 	 * @var    CascadeHelper
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	protected $_name = null;
 
@@ -68,7 +68,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 *                                          Recognized key values include 'name', 'group', 'params', 'language'
 	 *                                          (this list is not meant to be comprehensive).
 	 *
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.0.0
 	 */
 	public function __construct(&$subject, $config = array())
 	{
@@ -80,7 +80,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 *
 	 * @return  array
 	 *
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.0.0
 	 */
 	public static function getSubscribedEvents(): array
 	{
@@ -105,7 +105,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 *
 	 * @return string|false Field type constant on success, False on failure.
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	public function onRadicalMartGetFieldType($context = null, $item = null)
 	{
@@ -119,7 +119,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 * @param   string|null          $search   List item object.
 	 * @param   QueryInterface|null  $query    A QueryInterface object to retrieve the data set.
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	public function onRadicalMartFilterFieldType(string $context = null, string $search = null, QueryInterface $query = null)
 	{
@@ -137,7 +137,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 * @param   Form|null      $form     Form object.
 	 * @param   Registry|null  $tmpData  Temporary form data.
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	public function onRadicalMartGetFieldForm(string $context = null, Form $form = null, Registry $tmpData = null)
 	{
@@ -167,7 +167,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 * @param   Form|null      $form     Form object.
 	 * @param   Registry|null  $tmpData  Temporary form data.
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	protected function loadFieldProductsForm(Form $form = null, Registry $tmpData = null)
 	{
@@ -186,7 +186,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 * @param   Form|null      $form     Form object.
 	 * @param   Registry|null  $tmpData  Temporary form data.
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	public function onRadicalMartAfterGetFieldForm(string $context = null, Form $form = null, Registry $tmpData = null)
 	{
@@ -216,7 +216,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 * @param   Form|null      $form     Form object.
 	 * @param   Registry|null  $tmpData  Temporary form data.
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	protected function changeFieldProductsForm(Form &$form = null, Registry $tmpData = null)
 	{
@@ -234,7 +234,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 *
 	 * @return false|\SimpleXMLElement SimpleXMLElement on success, False on failure.
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	public function onRadicalMartGetProductFieldXml(string $context = null, object $field = null, Registry $tmpData = null)
 	{
@@ -276,7 +276,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 *
 	 * @return false|\SimpleXMLElement SimpleXMLElement on success, False on failure.
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	public function onRadicalMartGetFilterFieldXml(string $context = null, object $field = null)
 	{
@@ -306,7 +306,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 * @param   object|null          $field    Field data object.
 	 * @param   mixed                $value    Value.
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	public function onRadicalMartGetProductsListQuery(string $context = null, QueryInterface $query = null,
 	                                                  object $field = null, $value = null)
@@ -336,7 +336,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 *
 	 * @return  string|false  Field html value.
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	public function onRadicalMartGetProductsFieldValue(string $context = null, object $field = null, $value = null)
 	{
@@ -365,7 +365,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 *
 	 * @return  string  Field html value.
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	public function onRadicalMartGetProductFieldValue($context = null, $field = null, $value = null)
 	{
@@ -393,7 +393,7 @@ class Cascade extends CMSPlugin implements SubscriberInterface
 	 *
 	 * @return  string|false  Field string values on success, False on failure.
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	protected function getFieldValue(object $field = null, $value = null, $display = 'all', $separatedValues = ' ', string $template = 'default', string $layout = 'string')
 	{

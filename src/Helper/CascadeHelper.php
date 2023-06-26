@@ -1,7 +1,7 @@
 <?php
 /*
  * @package   mod_radicalmart_categories
- * @version   __DEPLOY_VERSION__
+ * @version   1.0.0
  * @author    Dmitriy Vasyukov - https://fictionlabs.ru
  * @copyright Copyright (c) 2022 Fictionlabs. All rights reserved.
  * @license   GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
@@ -23,21 +23,21 @@ use Joomla\String\StringHelper;
 /**
  * @package     Helper class
  *
- * @since       __DEPLOY_VERSION__
+ * @since       1.0.0
  */
 class CascadeHelper
 {
 	/**
 	 * @var Registry
 	 *
-	 * @since __DEPLOY_VERSION__
+	 * @since 1.0.0
 	 */
 	protected $params;
 
 	/**
 	 * @var Input
 	 *
-	 * @since __DEPLOY_VERSION__
+	 * @since 1.0.0
 	 */
 	protected $input;
 
@@ -45,7 +45,7 @@ class CascadeHelper
 	/**
 	 * @param   Registry  $params
 	 *
-	 * @since __DEPLOY_VERSION__
+	 * @since 1.0.0
 	 */
 	public function __construct(Registry $params)
 	{
